@@ -238,3 +238,113 @@ app.on('ready', () => {
     mainWindow.setMenu(menu);
   }
 });
+
+
+// app.setAsDefaultProtocolClient('YXAid')
+// app.removeAsDefaultProtocolClient('YXAid')
+// app.isDefaultProtocolClient('YXAid');
+
+// app.setUserTasks([{
+//   program: '',
+//   arguments: '',
+//   title: '',
+//   description: '',
+//   iconPath: '',
+//   iconIndex: ''
+// }])
+
+app.makeSingleInstance(function(argv, workingDirectory) {
+  return true;
+})
+
+// When critical is passed, the dock icon will bounce until either the application becomes active or the request is canceled.
+// When informational is passed, the dock icon will bounce for one second.
+// However, the request remains active until either the application becomes active or the request is canceled.
+app.dock.bounce('informational')  // critical
+
+app.dock.setBadge('测试')
+
+app.on('will-finish-launching', function() {
+  // On Windows and Linux, the will-finish-launching event is the same as the ready event;
+  // on OS X, this event represents the applicationWillFinishLaunching notification of NSApplication.
+  // You would usually set up listeners for the open-file and open-url events here,
+  // and start the crash reporter and auto updater.
+
+})
+
+app.on('before-quit', function(event) {
+  // event.preventDefault()
+})
+
+app.on('will-quit', function(event) {
+  // event.preventDefault()
+})
+
+app.on('quit', function(event, exitCode) {
+
+})
+
+// Quit when all windows are closed.
+app.on('window-all-closed', function () {
+  // On OS X it is common for applications and their menu bar
+  // to stay active until the user quits explicitly with Cmd + Q
+  if (process.platform !== 'darwin') {
+    app.quit()
+  }
+})
+
+app.on('activate', function () {
+  // On OS X it's common to re-create a window in the app when the
+  // dock icon is clicked and there are no other windows open.
+  if (mainWindow === null) {
+    createWindow()
+  }
+})
+
+// In this file you can include the rest of your app's specific main process
+// code. You can also put them in separate files and require them here.
+
+
+app.on('open-file', function(event, path) {
+
+})
+
+app.on('open-url', function(event, path) {
+
+})
+
+app.on('browser-window-blur', function(event, window) {
+  console.log('browser-window-blur')
+})
+
+app.on('browser-window-focus', function(event, window) {
+  console.log('browser-window-focus')
+})
+
+app.on('browser-window-created', function(event, window) {
+  console.log('browser-window-created')
+})
+
+app.on('certificate-error', function(event, webContents, url, error, certificate, callback) {
+  if (url == "https://github.com") {
+    // Verification logic.
+    event.preventDefault();
+    callback(true);
+  } else {
+    callback(false);
+  }
+})
+
+app.on('select-client-certificate', function(event, webContents, url, list, callback) {
+  event.preventDefault();
+  callback(list[0]);
+})
+
+app.on('login', function(event, webContents, request, authInfo, callback) {
+  event.preventDefault();
+  callback('username', 'secret');
+})
+
+app.on('gpu-process-crashed', function() {
+
+})
