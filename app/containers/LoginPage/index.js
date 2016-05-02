@@ -14,7 +14,7 @@ export default class Page extends Component {
           <p className="login-box-msg">登陆</p>
           <form action="../../index2.html" method="post">
             <div className="form-group has-feedback">
-              <input type="email" className="form-control" placeholder="Email" />
+              <input type="email" className="form-control" placeholder="邮箱" />
               <span className=" form-control-feedback"></span>
             </div>
             <div className="form-group has-feedback">

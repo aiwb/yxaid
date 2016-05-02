@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import ContentHeader from '@components/contentHeader';
 import styles from './index.css';
 
-export default class HomePage extends Component {
+export default class Page extends Component {
   render() {
     return (
        <div className={`content-wrapper ${styles.contentWrapper}`}>

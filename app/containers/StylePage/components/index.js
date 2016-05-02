@@ -4,7 +4,7 @@ import styles from '../index.css';
 import SelectorTab from './SelectorTab';
 import SelectorFilter from './SelectorFilter';
 
-export default class StylePage extends Component {
+export default class Page extends Component {
   static childContextTypes = {
     location: React.PropTypes.object
   };
