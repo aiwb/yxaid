@@ -8,13 +8,13 @@ export default class Sidebar extends Component {
         <section className="sidebar">
           <ul className="sidebar-menu">
             <li>
-              <Link to='/style'>
+              <Link to='/app/style'>
                 <i className="fa fa-connectdevelop" />
                 <span>样式</span>
               </Link>
             </li>
             <li>
-              <Link to='/setting'>
+              <Link to='/app/setting'>
                 <i className="fa fa-connectdevelop" />
                 <span>设置</span>
               </Link>

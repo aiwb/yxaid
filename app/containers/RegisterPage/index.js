@@ -39,7 +39,8 @@ export default class Page extends Component {
               <i className="fa fa-google-plus"></i> 用Google账号登陆
             </a>
           </div>
-          <Link to="login" className="text-center">已有账号</Link>
+          <Link to="forget">忘记密码了</Link><br />
+          <Link to="login" className="text-center">登录</Link>
         </div>
       </div>
     );

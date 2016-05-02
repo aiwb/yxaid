@@ -1,20 +1,7 @@
-.icheckbox_squareBlue {
-  position: relative;
+:global(.icheckbox_square-blue) {
+
 }
-.icheckbox_squareBlue input {
-  position: absolute;
-  top: -20%;
-  left: -20%;
-  display: block;
-  width: 140%;
-  height: '140%';
-  margin: 0px;
-  padding: '0px';
-  border: '0px';
-  opacity: 0;
-  background: rgb(255, 255, 255)
-}
-.icheckbox_squareBlue ins {
+:global(.icheckbox_square-blue_input) {
   position: absolute;
   top: -20%;
   left: -20%;
@@ -22,6 +9,16 @@
   width: 140%;
   height: 140%;
   margin: 0px;
+  padding: 0px;
+  border: 0px;
+  opacity: 0;
+  background: rgb(255, 255, 255);
+}
+:global(.iCheck-helper) {
+  position: absolute; top: -20%;
+  left: -20%;
+  display: block; width: 140%;
+  height: 140%; margin: 0px;
   padding: 0px;
   border: 0px;
   opacity: 0;
