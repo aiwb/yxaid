@@ -6,6 +6,8 @@ import HomePage from '../containers/HomePage';
 import StylePage from '../containers/StylePage';
 import SettingPage from '../containers/SettingPage';
 import RegisterPage from '../containers/RegisterPage';
+import LoginPage from '../containers/LoginPage';
+import ForgetPage from '../containers/forgetPage';
 
 export default (
   <Route path="/" component={Root}>
@@ -16,5 +18,7 @@ export default (
       <Route path="setting" component={SettingPage} />
     </Route>
     <Route path="register" component={RegisterPage} />
+    <Route path="login" component={LoginPage} />
+    <Route path="forget" component={ForgetPage} />
   </Route>
 );
