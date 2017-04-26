@@ -1,0 +1,39 @@
+body {
+  position: relative;
+  overflow-y: hidden;
+  overflow: hidden;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+a:hover,
+a:active,
+a:focus {
+  text-decoration: none;
+  cursor: pointer;
+  color: #333;
+}
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.clearfix {
+  display: inline-block;
+}
+.clearfix {
+  display: block;
+}
+
+.content-wrapper__style-page {
+  height: 100%;
+  overflow: hidden;
+}

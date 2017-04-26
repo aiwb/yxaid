@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>YXAid</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <link rel="stylesheet" href="./assets/bootstrap.min.css">
+    <link rel="stylesheet" href="../node_modules/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="../node_modules/ionicons/css/ionicons.min.css" />
+    <link rel="stylesheet" href="./assets/AdminLTE.min.css">
+    <link rel="stylesheet" href="./assets/_all-skins.min.css">
+    <script>
+      (function() {
+        if (!process.env.HOT) {
+          const link = document.createElement('link');
+          link.rel = 'stylesheet';
+          link.href = '../dist/style.css';
+          console.log(link.outerHTML);
+          document.write(link.outerHTML);
+        }
+      }());
+    </script>
+  </head>
+  <body class="skin-blue sidebar-mini">
+    <div id="root" className="wrapper"></div>
+    <script src="./assets/jquery.js"></script>
+    <script src="./assets/bootstrap.min.js"></script>
+    <script src="./assets/AdminLTE.min.js"></script>
+    <script src="./assets/ueditor/ueditor.config.js"></script>
+    <script src="./assets/ueditor/ueditor.all.min.js"></script>
+    <script>
+      (function() {
+        const script = document.createElement('script');
+        script.src = (process.env.HOT) ? 'http://localhost:3000/dist/bundle.js' : '../dist/bundle.js';
+        console.log(script.outerHTML);
+        document.write(script.outerHTML);
+      }());
+    </script>
+  </body>
+</html>

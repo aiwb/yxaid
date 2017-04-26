@@ -1,0 +1,138 @@
+/* base */
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.clearfix {
+  display: inline-block;
+}
+.clearfix {
+  display: block;
+}
+
+/* content */
+html, body {
+  height: 100%;
+}
+.contentWrapper {
+  height: 100%;
+  overflow: hidden;
+  background-color: #fff;
+}
+.content {
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* selector */
+.selector {
+  float: left;
+  width: 375px;
+  border-right: 1px solid #ddd;
+}
+
+/* tab */
+.tabWrapper {
+  height: 60px;
+  border-bottom: 1px solid #ccc;
+}
+.tab {
+  composes: clearfix;
+  list-style: none;padding: 0;
+  margin: 0;
+  position: relative;
+  font-weight: 700;
+  color: #333;
+  background-color: #ddd;
+  border-bottom: 1px solid #ccc;
+}
+.tabItem {
+  float: left;
+  width: 20%;
+  text-align: center;
+  height: 30px;
+  line-height: 30px;
+  border-right: 1px solid #ccc;
+}
+.tabItem:last-child {
+  border-right: none;
+}
+.tabItemActive {
+  background: #bbb;
+}
+.tabItem .subTab {
+  display: none;
+  font-weight: 400;
+  width: 100%; list-style: none;padding: 0;
+  margin: 0;left: 0; top: 30px;position: absolute;
+}
+.tabItemActive .subTab {
+  display: block;
+}
+.tabItem .subTab .subTabItem {
+  float: left;
+  width: 20%;
+  text-align: center;
+  height: 30px;
+}
+.tabItem .subTab .subTabItemActive a {
+  padding: 0 5px;
+  color: #fff;
+  background-color: #3c8dbc;
+  border-radius: 4px;
+}
+
+.editorTemplateList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  height: 800px;
+  overflow-y: scroll
+}
+
+.editorTemplateList::-webkit-scrollbar {
+  width: 1px;
+}
+.editorTemplateList::-webkit-scrollbar-thumb {
+  background: transparent;
+}
+.editorTemplateList:hover::-webkit-scrollbar-thumb {
+  background: #c8ced6;
+}
+.editorTemplateList li {
+  position: relative;
+  padding: 10px 15px;
+  border-bottom: 1px dotted #ddd;
+  cursor: pointer;
+}
+.editorTemplateList li:hover {
+  background-color: #f0f0f0;
+}
+.editorTemplateList li .toolbar {
+  position: absolute;
+  display: none;
+  right: 0;
+  bottom: 0;
+  height: 16px;
+  line-height: 16px;
+  background-color: rgba(0,0,0,0.2);
+  color: #fff;
+  width: 100%;
+  text-align: right;
+  padding: 0 10px;
+  color: #fff;
+}
+.editorTemplateList li:hover .toolbar {
+  display: block;
+}
+
+.editor {
+  float: left;
+  padding: 2px;
+  width: 50%;
+}

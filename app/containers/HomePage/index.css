@@ -1,0 +1,8 @@
+.contentWrapper {
+
+}
+.contentWrapper .content {
+  padding: 0;
+  text-align: center;
+  font-size: 30px;
+}
