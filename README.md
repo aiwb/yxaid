@@ -1,5 +1,7 @@
 # 微信运营助手
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/aiwb/yxaid.svg)](https://greenkeeper.io/)
+
 ## Run
 
 Run this two commands __simultaneously__ in different console tabs.
