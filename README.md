@@ -1,4 +1,4 @@
-# electron-react-boilerplate
+# 微信运营助手
 
 ## Run
 
@@ -88,3 +88,7 @@ Please checkout [Building windows apps from non-windows platforms](https://githu
 We use [webpack-target-electron-renderer](https://github.com/chentsulin/webpack-target-electron-renderer) to provide a build target for electron renderer process. Read more information [here](https://github.com/chentsulin/webpack-target-electron-renderer#how-this-module-works).
 
 > Note: webpack >= 1.12.15 has built-in support for `electron-main` and `electron-renderer` targets.
+
+# refer
+
+- http://www.135editor.com/

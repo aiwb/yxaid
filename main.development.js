@@ -15,6 +15,10 @@ app.on('window-all-closed', () => {
   if (process.platform !== 'darwin') app.quit();
 });
 
+app.commandLine.appendSwitch('remote-debugging-port', '8315');
+app.commandLine.appendSwitch('host-rules', 'MAP * 127.0.0.1');
+
+app.commandLine.appendSwitch('–enable-logging', true);
 
 app.on('ready', () => {
   mainWindow = new BrowserWindow({
@@ -23,6 +27,11 @@ app.on('ready', () => {
     height: 728
   });
 
+<<<<<<< HEAD
+=======
+  console.log(win.webContents);
+
+>>>>>>> 19b722e2573a027d75b0b8fc8d1445ed3f85993e
   mainWindow.loadURL(`file://${__dirname}/app/app.html`);
 
   mainWindow.webContents.on('did-finish-load', () => {
