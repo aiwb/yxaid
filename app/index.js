@@ -7,7 +7,9 @@ import routes from './routes/routes';
 import configureStore from './store/configureStore';
 import './app.global.css';
 
-window.jquery = window.jQuery = $;
+require('jquery');
+
+let $ = window.jQuery;
 
 const store = configureStore();
 const history = syncHistoryWithStore(hashHistory, store);
